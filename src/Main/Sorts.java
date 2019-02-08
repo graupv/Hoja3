@@ -13,7 +13,6 @@ public class Sorts {
     for (int i = 1; i <= array.length;){
         if (array[i - 1] <= array[i])
                 ++i;
-        ///
 
         else {
                 int tempValue = array[i];
