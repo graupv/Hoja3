@@ -1,10 +1,13 @@
 package Main;
 
 public class Numeros implements Comparable<Numeros> {
+
     /*
+    Comparable<T>
     Estructura de datos que implementa Comparable.
     Generic es si mismo para permitir comparar entre objetos
     de la misma ADT/clase.
+    Esto ya es implementado por otras clases como Integer, etc.
      */
 
     int val;
@@ -16,6 +19,7 @@ public class Numeros implements Comparable<Numeros> {
 
         if (this.val == n.val){
             return 0;
+            // this > that
         } else if (this.val > n.val){
             return 1;
         } else {

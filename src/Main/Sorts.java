@@ -5,23 +5,24 @@ public class Sorts {
     Clase que sus metodos son cada sort.
      */
 
-    void gnome_sort(Numeros[] n){
+    void gnome_sort(int[] n){
+    // implementar el sort
 
     }
 
-    void radix_sort(Numeros[] n){
+    void radix_sort(int[] n){
 
     }
 
-    void quick_sort(Numeros[] n){
+    void quick_sort(int[] n){
 
     }
 
-    void merge_sort(Numeros[] n){
+    void merge_sort(int[] n){
 
     }
 
-    void gravity_sort(Numeros[] n){
+    void gravity_sort(int[] n){
     //  tambien llamado bead sort
 
     }
