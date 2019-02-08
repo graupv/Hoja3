@@ -5,7 +5,7 @@ public class Sorts {
     Clase que sus metodos son cada sort.
      */
 
-    void gnome_sort(int[] n){
+    int[] gnome_sort(int[] array){
     // implementar el sort
     for (int i = 1; i <= array.length;){
         if (array[i - 1] <= array[i])
@@ -22,7 +22,6 @@ public class Sorts {
             }
         }
         return array;
-            
 
     }
 
