@@ -5,6 +5,7 @@ import java.util.*;
 public class Sorts {
     /*
     Clase que sus metodos son cada sort.
+    Extraidos de JavaStructures y geeksforgeeks.com
      */
 
     int[] gnome_sort(int[] array){
@@ -34,7 +35,7 @@ public class Sorts {
             contar(arr, n, exp);
     }
     
-        static void contar(int arr[], int n, int exp){
+    static void contar(int arr[], int n, int exp){
 
             int out[] = new int[n];
             int i;
@@ -61,8 +62,8 @@ public class Sorts {
         }
  
     
-
-        static int Maximo(int arr[], int n)
+    static int Maximo(int arr[], int n)
+            /*  para encontrar maximo en arreglo*/
         {
             int mx = arr[0];
             for (int i = 1; i < n; i++)
@@ -88,6 +89,7 @@ public class Sorts {
     }
 
     void merge_sort(int[] n, int temp[], int low, int mid, int high){
+            /* Extraido de Geeksforgeeks.com/merge-sort*/
         //  n == top half
         //  temp == bottom half
         int res_ind = low;
@@ -109,9 +111,17 @@ public class Sorts {
         }
     }
 
-    void gravity_sort(int[] n){
-    //  tambien llamado bead sort
-
+    void bubbleSort(int arr[]){
+        int n = arr.length;
+        for (int i = 0; i < n-1; i++)
+            for (int j = 0; j < n-i-1; j++)
+                if (arr[j] > arr[j+1])
+                {
+                    // swap arr[j+1] and arr[i]
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
     }
 
     static int partition(int arr[], int low, int high){
