@@ -6,7 +6,7 @@ Estructuras de Dast
 Main.java
 Clase Main
 */
-package Main;
+//package Main;
 
 import java.util.*;
 import java.io.*;
