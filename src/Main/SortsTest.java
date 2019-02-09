@@ -14,7 +14,7 @@ public class SortsTest {
     //Para cada Sort se realiza una prueba unitaria
     //Todas se ejecutan sin error
 
-   /* @org.junit.Test
+    @org.junit.Test
     public void contar() {
         Sorts ob = new Sorts();
         int arr[] = {170, 45, 75, 90, 802, 24, 2, 66}; 
@@ -80,5 +80,5 @@ public class SortsTest {
         for (int i=0; i<n; ++i) 
             System.out.print(arr[i] + " "); 
         System.out.println(); 
-    }*/
+    }
 }
