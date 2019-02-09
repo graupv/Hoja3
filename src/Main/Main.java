@@ -1,4 +1,12 @@
-//package Main;
+/*
+Gerardo Pineda 18848
+Sara Zavala 18893
+Estuardo Ureta
+Estructuras de Dast
+Main.java
+Clase Main
+*/
+package Main;
 
 import java.util.*;
 import java.io.*;
@@ -8,8 +16,8 @@ public class Main {
         int[] unsorted = new int[3000];
         int[] temp;
         int[] sorted = new int[3000];
-        String sorted_file_path = "C:\\Users\\gerap\\Documents\\GitHub\\Hoja3\\src\\Main\\ordered_numbers.txt";
-        String unsorted_file_path = "C:\\Users\\gerap\\Documents\\GitHub\\Hoja3\\src\\Main\\numbers.txt";
+        String sorted_file_path = "C:\\Users\\user\\Documents\\GitHub\\Hoja3\\src\\Main\\ordered_numbers.txt";
+        String unsorted_file_path = "C:\\Users\\user\\Documents\\GitHub\\Hoja3\\src\\Main\\numbers.txt";
         final String DELIMITADOR = " \t\n\r\fABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz|°!\"#$%&()=?¡¿'\\´¨[]{}_-:.;,^`¬~";
         BufferedReader br = null;
         Sorts sort = new Sorts();

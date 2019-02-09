@@ -1,10 +1,17 @@
 //package Main;
-
+/*
+Gerardo Pineda 18848
+Sara Zavala 18893
+Estuardo Ureta
+Estructuras de Dastos
+SortsTest.java
+Clase donde se encuentran las pruebas unitarias para cada Sort
+*/
 import static org.junit.Assert.*;
 
 public class SortsTest {
 
-    @org.junit.Test
+   /* @org.junit.Test
     public void contar() {
         Sorts ob = new Sorts();
         int arr[] = {170, 45, 75, 90, 802, 24, 2, 66}; 
@@ -70,5 +77,5 @@ public class SortsTest {
         for (int i=0; i<n; ++i) 
             System.out.print(arr[i] + " "); 
         System.out.println(); 
-    }
+    }*/
 }

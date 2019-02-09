@@ -1,4 +1,13 @@
-//package Main;
+package Main;
+/*
+Gerardo Pineda 18848
+Sara Zavala 18893
+Estuardo Ureta
+Estructuras de Dastos
+Sorts.java
+Clase donde se encuentran todos los sorts como
+metodos diferentes
+*/
 
 import java.util.*;
 

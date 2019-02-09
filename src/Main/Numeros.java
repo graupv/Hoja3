@@ -1,5 +1,13 @@
 package Main;
 
+/*
+Gerardo Pineda 18848
+Sara Zavala 18893
+Estuardo Ureta
+Estructuras de Datos
+Numeros.java
+Clase donde se utiliza CompareTo
+*/
 public class Numeros implements Comparable<Numeros> {
 
     /*
