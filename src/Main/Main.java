@@ -4,23 +4,53 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException{
-        int[] unsorted = new int[3001];
-        int[] sorted = new int[3001];
+    public static void main(String[] args) throws IOException {
+        int[] unsorted = new int[3000];
+        int[] temp;
+        int[] sorted = new int[3000];
+        String sorted_file_path = "C:\\Users\\gerap\\Documents\\GitHub\\Hoja3\\src\\Main\\ordered_numbers.txt";
+        String unsorted_file_path = "C:\\Users\\gerap\\Documents\\GitHub\\Hoja3\\src\\Main\\numbers.txt";
+        final String DELIMITADOR = " \t\n\r\fABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz|°!\"#$%&()=?¡¿'\\´¨[]{}_-:.;,^`¬~";
         BufferedReader br = null;
-        FileReader unsorted_file, sorted_file;
+        Sorts sort = new Sorts();
+        String all_lines = null;
 
+        FileReader sorted_file = null;
+        FileReader unsorted_file = null;
         try {
 
-            //br = new BufferedReader(new FileReader(FILENAME));
-            unsorted_file = new FileReader("numbers.txt");
-            sorted_file = new FileReader("ordered_numbers.txt");
+            unsorted_file = new FileReader(sorted_file_path);
+            sorted_file = new FileReader(unsorted_file_path);
             br = new BufferedReader(unsorted_file);
 
             String sCurrentLine;
 
+            int val, cont;
             while ((sCurrentLine = br.readLine()) != null) {
-                System.out.println(sCurrentLine);
+                all_lines += sCurrentLine + "\t";
+
+            }
+            StringTokenizer token = new StringTokenizer(all_lines, DELIMITADOR);
+            all_lines = null;
+            br.close();
+            // despues de leer el archivo correr sort.
+            // gnome radix merge quick bubble
+
+            temp = unsorted;
+            while (token.hasMoreTokens()){
+                for (int i = 0; i < unsorted.length; i++) {
+                    unsorted[i] = Integer.parseInt(token.nextToken());
+                }
+            }
+            int[] res = new int[3000];
+            res = sort.gnome_sort(unsorted);
+            //  aqui cambiar por cada sort
+            System.out.println("sorted gnome");
+
+            br = new BufferedReader(sorted_file);
+            while ((sCurrentLine = br.readLine()) != null) {
+                all_lines += sCurrentLine + "\t";
+
             }
 
         } catch (IOException e) {
@@ -29,21 +59,13 @@ public class Main {
 
         } finally {
 
-            try {
+            br.close();
 
-                if (br != null)
-                    br.close();
+            sorted_file.close();
 
-                if (fr != null)
-                    fr.close();
-
-            } catch (IOException ex) {
-
-                ex.printStackTrace();
-
-            }
-
+            unsorted_file.close();
         }
-    }
 
+
+    }
 }

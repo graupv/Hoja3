@@ -2,15 +2,16 @@ package Main;
 
 import java.util.*;
 
+
 public class Sorts {
     /*
     Clase que sus metodos son cada sort.
     Extraidos de JavaStructures y geeksforgeeks.com
      */
 
-    int[] gnome_sort(int[] array){
+    int[] gnome_sort(int[] array) throws IndexOutOfBoundsException{
     // implementar el sort
-    for (int i = 1; i <= array.length;){
+    for (int i = 1; i < array.length;){
         if (array[i - 1] <= array[i])
                 ++i;
 
