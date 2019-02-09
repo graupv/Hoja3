@@ -11,6 +11,8 @@ package Main;
 import java.util.*;
 import java.io.*;
 
+//Se abre y lee un archivo, se generam 3000 numeros
+//y se implementan los sorts conforme se van cambiando uno por uno
 public class Main {
     public static void main(String[] args) throws IOException {
         int[] unsorted = new int[3000];
@@ -22,11 +24,11 @@ public class Main {
         BufferedReader br = null;
         Sorts sort = new Sorts();
         String all_lines = null;
-
+        // Direcciones de los documentos txt
         FileReader sorted_file = null;
         FileReader unsorted_file = null;
         try {
-
+            // Se leen los textos
             unsorted_file = new FileReader(sorted_file_path);
             sorted_file = new FileReader(unsorted_file_path);
             br = new BufferedReader(unsorted_file);
@@ -50,10 +52,11 @@ public class Main {
                     unsorted[i] = Integer.parseInt(token.nextToken());
                 }
             }
+            //Se crea una lista y se llena con los 3000 valores
             int[] res = new int[3000];
             res = sort.gnome_sort(unsorted);
             //  aqui cambiar por cada sort
-            System.out.println("sorted gnome");
+            System.out.println("sorted Bubble");
 
             br = new BufferedReader(sorted_file);
             while ((sCurrentLine = br.readLine()) != null) {

@@ -11,6 +11,8 @@ metodos diferentes
 
 import java.util.*;
 
+//Los sorts fueron basados en el libro de clase
+//y de documentacion
 
 public class Sorts {
     /*

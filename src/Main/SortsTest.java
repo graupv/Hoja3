@@ -11,6 +11,9 @@ import static org.junit.Assert.*;
 
 public class SortsTest {
 
+    //Para cada Sort se realiza una prueba unitaria
+    //Todas se ejecutan sin error
+
    /* @org.junit.Test
     public void contar() {
         Sorts ob = new Sorts();
